@@ -8,8 +8,8 @@ Encontre os números de **1 a 49, em ordem**, em 1 minuto. São 6 rodadas: sem 5
 
 ## Como acessar
 
-- **Participantes:** abram o link no celular → https://__USER__.github.io/pel-5s-numeros/
-- **Facilitador (telão):** https://__USER__.github.io/pel-5s-numeros/?modo=apresentador
+- **Participantes:** abram o link no celular → https://anderson-timoteo.github.io/JogosMelhoria/
+- **Facilitador (telão):** https://anderson-timoteo.github.io/JogosMelhoria/?modo=apresentador
   - `→` avança · `←` volta · `F` tela cheia
   - Nas telas de senso há uma barra de 20 s (pausar / pular), seguida da contagem de 10 s.
 
