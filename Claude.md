@@ -67,7 +67,7 @@ A pessoa encontra os números de **1 a 49 em ordem**, tocando neles. O quadro fi
 
 ### 5.2 Como jogar
 - "Toque nos números de **1 até 49, em ordem**."
-- "Você tem **1 minuto** por rodada."
+- "Você tem **20 segundos** por rodada."
 - "Sua pontuação é o último número certo que você encontrou."
 - "A cada rodada o quadro fica mais organizado: veja quanto você melhora."
 
@@ -77,7 +77,7 @@ A pessoa encontra os números de **1 a 49 em ordem**, tocando neles. O quadro fi
 - Opcional: a barra de 20 s de explicação do material master, só no modo apresentador (seção 10).
 
 ### 5.4 Rodada (o jogo)
-- **Cronômetro de 60 s** no topo (anel + `0:59`); nos últimos 10 s fica vermelho e pulsa.
+- **Cronômetro de 20 s** no topo (anel + `0:19`); nos últimos 5 s fica vermelho e pulsa.
 - Indicador "Próximo: **12**" sempre visível.
 - **Toque correto:** o número fica marcado (círculo verde translúcido + leve escala), o próximo é atualizado e há vibração curta (`navigator.vibrate(15)`, se existir).
 - **Toque errado:** o número tremula em vermelho por 300 ms. Não há penalidade, só feedback.
@@ -230,7 +230,7 @@ pel-5s-numeros/
 - [ ] Abre pelo link do GitHub Pages no Android (Chrome) e no iPhone (Safari) sem baixar nada.
 - [ ] Em celular retrato, todos os números são tocáveis e não ficam cortados.
 - [ ] Toque na ordem certa marca o número; toque errado dá feedback e não avança.
-- [ ] Cronômetro de 60 s por rodada, com "TEMPO!" no fim; completar o 49 encerra antes.
+- [ ] Cronômetro de 20 s por rodada, com "TEMPO!" no fim; completar o 49 encerra antes.
 - [ ] Contagem de 10 s antes de cada rodada de senso.
 - [ ] 6 quadros exatamente como na seção 6, com a mesma semente para todos.
 - [ ] Botão para alternar entre o quadro anterior e o atual.

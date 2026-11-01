@@ -251,7 +251,7 @@ h1,h2,h3,p{margin:0}
     <div class="card">
       <ul class="steps">
         <li><span class="ic">1</span><span>Toque nos números de <b>1 até 49, em ordem</b>.</span></li>
-        <li><span class="ic">⏱</span><span>Você tem <b>1 minuto</b> por rodada.</span></li>
+        <li><span class="ic">⏱</span><span>Você tem <b>20 segundos</b> por rodada.</span></li>
         <li><span class="ic">★</span><span>Sua pontuação é o <b>último número certo</b> que você encontrou.</span></li>
         <li><span class="ic">↗</span><span>A cada rodada o quadro fica mais organizado: <b>veja quanto você melhora</b>.</span></li>
       </ul>
@@ -297,7 +297,7 @@ h1,h2,h3,p{margin:0}
     <div class="nextbox" aria-live="polite"><small>Próximo</small><b id="play-next">1</b></div>
     <div class="ring" id="ring" role="timer" aria-label="Tempo restante">
       <svg viewBox="0 0 58 58" aria-hidden="true"><circle class="bg" cx="29" cy="29" r="25"/><circle class="fg" id="ring-fg" cx="29" cy="29" r="25"/></svg>
-      <b id="play-time">1:00</b>
+      <b id="play-time">0:20</b>
     </div>
   </div>
   <div class="boardwrap"><div class="board" id="board" role="group" aria-label="Quadro de números"></div></div>
@@ -310,7 +310,7 @@ h1,h2,h3,p{margin:0}
       <div class="lbl" id="sc-label">Sem 5S</div>
       <h2 class="score-big" id="t-score"><span id="sc-pts">0</span><small>pontos</small></h2>
       <div class="delta hide" id="sc-delta"></div>
-      <div class="stats"><span>Tempo: <b id="sc-time">60 s</b></span><span>Erros: <b id="sc-err">0</b></span></div>
+      <div class="stats"><span>Tempo: <b id="sc-time">20 s</b></span><span>Erros: <b id="sc-err">0</b></span></div>
     </div>
     <div class="card">
       <div class="sec-title">Suas rodadas</div>
@@ -373,7 +373,7 @@ h1,h2,h3,p{margin:0}
 var KEY = 'pel5s-progresso';
 var params = new URLSearchParams(location.search);
 var PRESENTER = params.get('modo') === 'apresentador';
-var GW = 1440, GH = 640, TEMPO = 60;
+var GW = 1440, GH = 640, TEMPO = 20;
 var SLOTS = [[30,50],[150,70],[80,150],[170,200],[40,230]];
 /* Ordem dos números para a semente 7, calculada uma vez (motor V8, igual ao
    material master). Assim o quadro é idêntico em qualquer navegador. */
@@ -685,7 +685,7 @@ function tick(){
   var rem = Math.max(0, TEMPO - el);
   $('play-time').textContent = fmt(rem);
   $('ring-fg').style.strokeDashoffset = (CIRC * (1 - rem / TEMPO)).toFixed(2);
-  $('ring').classList.toggle('warn', rem <= 10);
+  $('ring').classList.toggle('warn', rem <= 5);
   if (rem <= 0) return endRound('tempo');
   play.raf = requestAnimationFrame(tick);
 }
@@ -769,7 +769,7 @@ function showScore(r){
   play = null;
   var d = state.rodadas[r];
   $('sc-label').textContent = 'Rodada ' + (r + 1) + ' · ' + nomeRodada(r);
-  $('sc-time').textContent = (d.tempo >= TEMPO ? 60 : Math.round(d.tempo)) + ' s';
+  $('sc-time').textContent = (d.tempo >= TEMPO ? TEMPO : Math.round(d.tempo)) + ' s';
   $('sc-err').textContent = d.erros;
   var dl = $('sc-delta');
   if (r > 0 && state.rodadas[r - 1]) {

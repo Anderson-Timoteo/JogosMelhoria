@@ -2,7 +2,7 @@
 
 Jogo do treinamento de 5S do **PEL · Programa de Excelência Logística** (Assaí · Supply / CDs).
 
-Encontre os números de **1 a 49, em ordem**, em 1 minuto. São 6 rodadas: sem 5S e depois um senso por vez. A cada rodada o quadro fica mais organizado e, no fim, você compara as suas pontuações.
+Encontre os números de **1 a 49, em ordem**, em 20 segundos. São 6 rodadas: sem 5S e depois um senso por vez. A cada rodada o quadro fica mais organizado e, no fim, você compara as suas pontuações.
 
 > "O mesmo trabalho, as mesmas pessoas: só o ambiente mudou."
 
